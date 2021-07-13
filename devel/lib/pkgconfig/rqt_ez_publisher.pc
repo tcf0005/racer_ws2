@@ -1,0 +1,8 @@
+prefix=/home/jetson/lab_ws/devel
+
+Name: rqt_ez_publisher
+Description: Description of rqt_ez_publisher
+Version: 0.5.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

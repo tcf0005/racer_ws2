@@ -1,0 +1,8 @@
+prefix=/home/jetson/lab_ws/devel
+
+Name: joytransfer
+Description: Description of joytransfer
+Version: 0.0.0
+Cflags: -I/home/jetson/lab_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

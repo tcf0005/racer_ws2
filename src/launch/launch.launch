@@ -1,0 +1,16 @@
+<launch>
+	
+	<node name="controlboard" pkg="i2cpwm_board" type="i2cpwm_board"/>
+
+	<node name="servo_array_driver_node" pkg="servo_array_driver" type="servo_array_driver_node" output="screen">
+		<rosparam file="$(find servo_array_driver)/config/config.yaml" command="load"/>
+	</node>
+
+
+	<!-- Joystick Driver -->				  
+				<node name="joy_node" pkg="joy" type="joy_node"/>-
+	
+	<!-- Node that Re-maps the joystick readings to a scale the motor drivers can accept -->
+				<node name="joy_transfer" pkg="joytransfer" type="joytransfer_node" required="true"/>
+
+</launch>
